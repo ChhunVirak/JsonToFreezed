@@ -2491,7 +2491,8 @@ q=A.cC("^[0-9]")
 m=q.b.test(n)?"_"+n:n
 q=l.c
 if(s!=null)B.a.l(q,"@Default("+s+") @JsonKey(name: '"+a+"') final "+r+" "+m+";")
-else B.a.l(q,"@JsonKey(name: '"+a+"') final "+r+"? "+m+";")},
+else{p=r.toLowerCase()==="dynamic"?"":"?"
+B.a.l(q,"@JsonKey(name: '"+a+"') final "+r+p+" "+m+";")}},
 $S:15}
 A.ct.prototype={
 $0(){var s=0,r=A.aB(t.z),q=1,p,o=this,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0
